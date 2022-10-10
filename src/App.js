@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import RenderQuestions from "./components/RenderQuestions";
+import default_questions from "./data/default_questions";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    if (!localStorage.getItem("questions")) {
+        localStorage.setItem("questions", JSON.stringify(default_questions));
+    }
+
+    return (
+        <div className="main_window">
+            <div className="header">
+                <button className="add_question">Add your question</button>
+                <button className="clear_all">Delete all questions</button>
+                <button className="default_questions">
+                    Return to default settings
+                </button>
+            </div>
+            <RenderQuestions
+                questions={JSON.parse(localStorage.getItem("questions"))}
+            />
+        </div>
+    );
 }
 
 export default App;
