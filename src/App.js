@@ -9,7 +9,7 @@ function App() {
         localStorage.setItem("questions", JSON.stringify(default_questions));
     }
     const [questionsList, setQuestionsList] = useState(
-        JSON.parse(localStorage.getItem("questions"))
+        localStorage.getItem("questions")
     );
 
     // function AddQuestion() {
@@ -47,7 +47,7 @@ function App() {
                 </button>
             </div>
             <RenderQuestions
-                questions={questionsList}
+                questions={JSON.parse(questionsList)}
                 setQuestionsList={setQuestionsList}
             />
         </div>

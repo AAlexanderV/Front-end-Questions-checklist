@@ -25,7 +25,7 @@ function QuestionLayout({
         questions.splice(arrIndexToDelete, 1);
         localStorage.setItem("questions", JSON.stringify(questions));
 
-        setQuestionsList(JSON.parse(localStorage.getItem("questions")));
+        setQuestionsList(localStorage.getItem("questions"));
     };
 
     return (
