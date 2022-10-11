@@ -46,7 +46,10 @@ function App() {
                     Return to default settings
                 </button>
             </div>
-            <RenderQuestions questions={questionsList} />
+            <RenderQuestions
+                questions={questionsList}
+                setQuestionsList={setQuestionsList}
+            />
         </div>
     );
 }

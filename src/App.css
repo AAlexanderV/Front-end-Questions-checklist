@@ -172,6 +172,24 @@ input:checked + .slider:before {
     box-shadow: 0 -5px 10px rgb(19, 181, 1) inset;
 }
 
+.delete_question{
+    width: fit-content;
+    height: fit-content;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.delete_question img{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: all .2s linear;
+}
+.delete_question img:hover{
+    box-shadow: 2px 2px 8px;
+    scale: 1.1;
+}
+
 .question_comments{
     display: block;
     margin-left: 90px;

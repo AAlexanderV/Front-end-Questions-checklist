@@ -1,6 +1,6 @@
 import QuestionLayout from "./QuestionLayout";
 
-function RenderQuestions({ questions }) {
+function RenderQuestions({ questions, setQuestionsList }) {
     return (
         <div className="questions_list">
             {questions.map((value, index) => {
@@ -10,6 +10,7 @@ function RenderQuestions({ questions }) {
                         question={value.question}
                         comments={value.comments}
                         questionStatusID={value.status}
+                        setQuestionsList={setQuestionsList}
                         key={index}
                     />
                 );
