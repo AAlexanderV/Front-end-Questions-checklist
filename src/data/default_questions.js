@@ -15,23 +15,23 @@ const default_questions = [
     {
         question:
             "Can you give an example of one of the ways that working with this has changed in ES6? Can you give an example of one of the ways that working with this has changed in ES6?",
-        comments: "",
+        comments: "Some comments",
         status: 0,
     },
     {
         question: "Explain how prototypal inheritance works.",
-        comments: "",
+        comments: "Add your comments",
         status: 1,
     },
     {
         question:
             "What's the difference between a variable that is: null, undefined or undeclared?",
-        comments: "",
+        comments: "Add your comments",
         status: 3,
     },
     {
         question: "How would you go about checking for any of these states?",
-        comments: "",
+        comments: "Add your comments",
         status: 2,
     },
 ];

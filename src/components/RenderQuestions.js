@@ -9,7 +9,7 @@ function RenderQuestions({ questions }) {
                         index={index + 1}
                         question={value.question}
                         comments={value.comments}
-                        questionStatus={value.status}
+                        questionStatusID={value.status}
                         key={index}
                     />
                 );

@@ -133,7 +133,6 @@ input:checked + .slider:before {
 .slider.round {
     border-radius: 34px;
 }
-  
 .slider.round:before {
     border-radius: 50%;
 }
@@ -160,23 +159,29 @@ input:checked + .slider:before {
 .question_text:hover {
     color: rgb(0, 29, 191);
 }
-.question_text.status-red{
+.question_text.status-Red{
     box-shadow: 0 -5px 10px rgb(225, 0, 0) inset;
 }
-.question_text.status-yellow{
+.question_text.status-Yellow{
     box-shadow: 0 -5px 10px rgb(241, 244, 17) inset;
 }
-.question_text.status-grey{
+.question_text.status-Grey{
     box-shadow: 0 -5px 10px rgb(101, 101, 101) inset;
 }
-.question_text.status-green{
+.question_text.status-Green{
     box-shadow: 0 -5px 10px rgb(19, 181, 1) inset;
 }
 
 .question_comments{
+    display: block;
     margin-left: 90px;
+    margin-top: 10px;
     font-style: italic;
     font-size: 12px;
     color: rgb(167, 167, 167);
     line-height: 1.1;
+}
+
+.hide {
+    display: none;
 }

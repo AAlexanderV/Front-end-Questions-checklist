@@ -1,29 +1,38 @@
+import { useState } from "react";
 import StatusButtonsRender from "./StatusButtonsRender";
+import ToggleComments from "./ToggleComments";
 
-function QuestionLayout({ index, question, comments, questionStatus }) {
-    const status_color = [
-        "status-red",
-        "status-yellow",
-        "status-grey",
-        "status-green",
-    ];
+function QuestionLayout({ index, question, comments, questionStatusID }) {
+    const colorMap = ["Red", "Yellow", "Grey", "Green"];
+
+    const [questionColor, setQuestionColor] = useState(
+        colorMap[questionStatusID]
+    ); // для смены статуса текста вопроса
 
     return (
-        <div className={"question_row " + status_color[questionStatus]}>
+        <div className={"question_row status-" + questionColor}>
             <div className="question_inner">
                 <StatusButtonsRender
                     index={index}
-                    questionStatus={questionStatus}
+                    questionStatusID={questionStatusID}
+                    setQuestionColor={setQuestionColor}
                 />
+
                 <div className="question_index">{index}</div>
                 <div
-                    className={"question_text " + status_color[questionStatus]}
+                    className={"question_text status-" + questionColor}
                     id={index}
+                    onClick={ToggleComments}
                 >
                     {question}
                 </div>
             </div>
-            <div className="question_comments">{comments}</div>
+            <div
+                className="question_comments hide"
+                id={"comments_" + index}
+            >
+                {comments}
+            </div>
         </div>
     );
 }
