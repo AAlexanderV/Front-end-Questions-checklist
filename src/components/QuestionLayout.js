@@ -2,7 +2,6 @@ import { useState } from "react";
 import StatusButtonsRender from "./StatusButtonsRender";
 import ToggleComments from "./ToggleComments";
 import EditComments from "./EditComments";
-// import DeleteQuestion from "./DeleteQuestion";
 import deleteIcon from "./../delete.png";
 
 function QuestionLayout({
