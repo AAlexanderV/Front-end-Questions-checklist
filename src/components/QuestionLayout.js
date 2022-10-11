@@ -1,6 +1,7 @@
 import { useState } from "react";
 import StatusButtonsRender from "./StatusButtonsRender";
 import ToggleComments from "./ToggleComments";
+import EditComments from "./EditComments";
 
 function QuestionLayout({ index, question, comments, questionStatusID }) {
     const colorMap = ["Red", "Yellow", "Grey", "Green"];
@@ -29,7 +30,9 @@ function QuestionLayout({ index, question, comments, questionStatusID }) {
             </div>
             <div
                 className="question_comments hide"
+                contentEditable="true"
                 id={"comments_" + index}
+                onBlur={EditComments}
             >
                 {comments}
             </div>
